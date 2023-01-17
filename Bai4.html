@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let string = "daotu"
+  let danhdau = new Array(256)
+
+  for (let i = 0; i < string.length; i++) {
+    let so = string.charCodeAt(i)
+    if(isNaN(danhdau[so])) {
+      danhdau[so] = 1
+    } else {
+      danhdau[so] += 1
+    }
+  }
+
+  for (let i = 0; i <= 255; i++) {
+    if(isNaN(danhdau[i]) == false) {
+      console.log((String.fromCharCode(i)) + " so lan xuat hien la " + danhdau[i])
+    }
+  }
+</script>
+</body>
+</html>

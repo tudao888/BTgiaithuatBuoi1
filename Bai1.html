@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let ars = new Array();
+    let a = prompt("Nhập vào số lượng phần tử mảng")
+    for (let i = 0; i < a; i++) {
+        let num = prompt("Nhập vào phần tử thứ " + (i + 1))
+        ars.push(num);
+        checkNumber(num)
+    }
+ function checkNumber(number) {
+     for (let i = 0; i < ars.length-1; i++) {
+         if (ars[i] === number) {
+             alert("Đã có trong mảng")
+         }
+     }
+ }
+</script>
+</body>
+</html>
